@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "title": "حسين غباين | مطوّر Flutter",
+    "description": "مطوّر Flutter بخبرة تتجاوز 3 سنوات في إطلاق تطبيقات iOS و Android إنتاجية — ثمانية تطبيقات منشورة على App Store و Google Play في خمسة أسواق. ~250,000 سطر Dart، Clean Architecture، أنظمة وقت حقيقي، ومدفوعات."
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "about": "عنّي",
+    "projects": "المشاريع",
+    "experience": "الخبرات",
+    "contact": "تواصل",
+    "openNavigation": "افتح القائمة",
+    "closeNavigation": "أغلق القائمة",
+    "openQuickLinks": "افتح روابط التواصل",
+    "switchToArabic": "التبديل إلى العربية",
+    "switchToEnglish": "التبديل إلى الإنجليزية",
+    "quickLinks": {
+      "email": "راسلني",
+      "whatsapp": "واتساب",
+      "linkedin": "لينكد إن",
+      "github": "GitHub",
+      "cv": "تحميل السيرة الذاتية"
+    }
+  },
+  "hero": {
+    "titleLight": "أصنع تجارب جوّال استثنائية",
+    "titleBold": "أنا حسين غباين",
+    "subtitle": "ثمانية تطبيقات منشورة على App Store و Google Play — من مصحف قطر الرسمي إلى منصّات AI مع WebRTC و SSE.",
+    "cta": "استعرض أعمالي",
+    "scrollDown": "مرّر للأسفل"
+  },
+  "filter": {
+    "ariaLabel": "البحث في المشاريع",
+    "platform": "المنصّة",
+    "category": "الفئة",
+    "stack": "التقنيات",
+    "status": "الحالة",
+    "search": "بحث",
+    "any": "الكل",
+    "platforms": {
+      "android": "Android",
+      "ios": "iOS",
+      "both": "Android و iOS"
+    },
+    "categories": {
+      "social": "اجتماعي",
+      "transport": "نقل وتوصيل",
+      "commerce": "تجارة إلكترونية",
+      "healthcare": "رعاية صحية",
+      "education": "تعليم",
+      "services": "خدمات"
+    },
+    "statuses": {
+      "production": "منشور",
+      "productionReady": "جاهز للنشر"
+    }
+  },
+  "about": {
+    "eyebrow": "عنّي",
+    "titleLine1": "حسين، تطبيقات",
+    "titleLine2": "مصمَّمة حول الناس",
+    "body": "مطوّر Flutter بخبرة تتجاوز 3 سنوات في إطلاق تطبيقات iOS و Android إنتاجية، مع ثمانية تطبيقات منشورة على App Store و Google Play في خمسة أسواق. مؤلف وحيد لستة codebases بإجمالي ~250,000 سطر Dart. أعمل بـ Clean Architecture feature-first و BLoC/Cubit و Riverpod وطبقات بيانات offline-first ومدفوعات عبر RevenueCat و Telr ومحافظ. أبني ميزات وقت حقيقي تشمل WebRTC و SSE و Cloud Functions — وأسلّم منتجات عربية أولًا RTL للأسواق السعودية والعراقية والمصرية والفلسطينية والقطرية.",
+    "cta": "تحميل السيرة الذاتية",
+    "stats": {
+      "years": { "value": "+3", "label": "سنوات خبرة" },
+      "apps": { "value": "8", "label": "منشور على المتاجر" },
+      "loc": { "value": "250K", "label": "سطر Dart" },
+      "markets": { "value": "5", "label": "أسواق" }
+    }
+  },
+  "showcase": {
+    "eyebrow1": "تطبيقات مختارة",
+    "eyebrow2": "أعمال مميّزة",
+    "subtitle": "ثلاثة تطبيقات Flutter منشورة على App Store و Google Play.",
+    "scrollDown": "مرّر للأسفل",
+    "explore": "دراسة الحالة",
+    "previous": "المشروع السابق",
+    "next": "المشروع التالي",
+    "appStore": "حمّل من App Store",
+    "playStore": "حمّل من Google Play"
+  },
+  "projects": {
+    "titleLine1": "اكتشف العمل",
+    "titleLine2": "الذي يناسب منتجك.",
+    "body": "استعرض مشاريعي وتعرّف على المنصّات والمعماريات والتجارب خلف كلٍّ منها.",
+    "all": "كل المشاريع",
+    "viewProject": "عرض المشروع",
+    "pageTitle": "المشاريع",
+    "pageSubtitle": "تطبيقات إنتاجية ومنصّات وتجارب مبنية بـ Flutter.",
+    "results": "{count, plural, =0 {لا توجد مشاريع تطابق هذه الفلاتر} one {مشروع واحد} two {مشروعان} few {# مشاريع} many {# مشروعًا} other {# مشروع}}",
+    "clearFilters": "مسح الفلاتر",
+    "featured": "مميّز"
+  },
+  "project": {
+    "back": "كل المشاريع",
+    "overview": "نظرة عامة",
+    "highlights": "أبرز الملامح",
+    "stack": "التقنيات",
+    "role": "الدور",
+    "platform": "المنصّة",
+    "status": "الحالة",
+    "market": "السوق",
+    "metrics": "أرقام رئيسية",
+    "nextProject": "المشروع التالي",
+    "discuss": "ناقش مشروعًا مشابهًا",
+    "download": "حمّل التطبيق",
+    "appStore": "حمّل من App Store",
+    "playStore": "حمّل من Google Play"
+  },
+  "experience": {
+    "eyebrow": "الخبرات",
+    "title": "المسيرة المهنية",
+    "body": "أدوار ومساهمات ومحطّات شكّلت طريقتي في بناء البرمجيات.",
+    "skillsTitle": "المهارات التقنية",
+    "educationTitle": "التعليم والشهادات",
+    "present": "حتى الآن",
+    "viewAll": "تحميل السيرة الذاتية الكاملة"
+  },
+  "contact": {
+    "titleLine1": "لنبنِ شيئًا معًا",
+    "titleLine2": "أو اطرح سؤالك",
+    "body": "شاركني بعض التفاصيل وسأعود إليك خلال يوم عمل واحد.",
+    "interestArea": "مجال الاهتمام",
+    "fullName": "الاسم الكامل",
+    "email": "البريد الإلكتروني",
+    "phone": "رقم الجوّال",
+    "country": "فلسطين",
+    "inquiryType": "نوع الطلب",
+    "preferredTime": "وقت التواصل المفضّل",
+    "message": "رسالتك",
+    "consent": "بإرسال هذا النموذج، فإنك توافق على معالجة بياناتك الشخصية لغرض الرد على طلبك.",
+    "submit": "إرسال الطلب",
+    "sending": "جارٍ الإرسال...",
+    "success": "تم استلام طلبك بنجاح. شكرًا لتواصلك.",
+    "error": "حدث خطأ ما. حاول مرة أخرى أو راسلني مباشرة.",
+    "interests": {
+      "mobileApp": "تطوير تطبيق جوّال",
+      "realtime": "ميزات الوقت الحقيقي",
+      "consulting": "استشارات معمارية",
+      "other": "أخرى"
+    },
+    "inquiries": {
+      "freelance": "مشروع مستقل",
+      "fulltime": "وظيفة بدوام كامل",
+      "consulting": "استشارة",
+      "collaboration": "تعاون"
+    },
+    "times": {
+      "morning": "صباحًا",
+      "afternoon": "ظهرًا",
+      "evening": "مساءً"
+    },
+    "quick": {
+      "call": "اتصال",
+      "whatsapp": "واتساب",
+      "email": "بريد",
+      "location": "الموقع"
+    },
+    "validation": {
+      "name": "يرجى إدخال اسمك الكامل.",
+      "email": "يرجى إدخال بريد إلكتروني صحيح.",
+      "message": "أخبرني قليلًا عن مشروعك."
+    }
+  },
+  "footer": {
+    "newsletterTitle": "ابقَ على اطلاع بأعمالي الجديدة",
+    "newsletterBody": "تحديثات متفرّقة عن التطبيقات الجديدة والمساهمات المفتوحة ودراسات الحالة.",
+    "emailPlaceholder": "البريد الإلكتروني",
+    "subscribe": "اشترك",
+    "sitemap": "خريطة الموقع",
+    "work": "الأعمال",
+    "connect": "تواصل",
+    "taglineTitle": "أبني تطبيقات يحبّ الناس استخدامها",
+    "taglineBody": "مطوّر Flutter يطلق تطبيقات إنتاجية في خمسة أسواق — Clean Architecture وأنظمة وقت حقيقي ومدفوعات على نطاق واسع.",
+    "rights": "جميع الحقوق محفوظة لحسين غباين",
+    "links": {
+      "home": "الرئيسية",
+      "about": "عنّي",
+      "projects": "المشاريع",
+      "experience": "الخبرات",
+      "contact": "تواصل",
+      "mushaf": "مصحف قطر",
+      "linkedwithin": "LinkedWithin",
+      "kayan": "كيان كافيه",
+      "linkedin": "لينكد إن",
+      "github": "GitHub",
+      "cv": "تحميل السيرة الذاتية"
+    }
+  },
+  "notFound": {
+    "title": "الصفحة غير موجودة",
+    "body": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
+    "cta": "العودة إلى الرئيسية"
+  }
+}

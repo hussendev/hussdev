@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#be185d"/>
+      <stop offset="1" stop-color="#831843"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdf2f8"/>
+      <stop offset="1" stop-color="#fce7f3"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#02233f" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="900" height="1100" rx="48" fill="url(#bg)"/>
+  <g filter="url(#shadow)" transform="translate(175 80)">
+    <rect width="550" height="940" rx="56" fill="#111827"/>
+    <rect x="12" y="12" width="526" height="916" rx="48" fill="#000"/>
+    <rect x="24" y="24" width="502" height="892" rx="40" fill="url(#screen)"/>
+    <rect x="205" y="36" width="140" height="28" rx="14" fill="#111827"/>
+    <text x="275" y="118" text-anchor="middle" font-family="system-ui,sans-serif" font-size="26" font-weight="700" fill="#831843">MMB</text>
+    <text x="275" y="146" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#be185d">Al-Mulook Salon · Nablus</text>
+    <rect x="60" y="170" width="430" height="180" rx="22" fill="#fff"/>
+    <rect x="60" y="170" width="430" height="100" rx="22" fill="#fbcfe8"/>
+    <text x="88" y="210" font-family="system-ui,sans-serif" font-size="14" fill="#9d174d">Featured service</text>
+    <text x="88" y="242" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#831843">Hair styling</text>
+    <text x="88" y="290" font-family="system-ui,sans-serif" font-size="16" fill="#be185d">From ª120 · 45 min</text>
+    <text x="88" y="330" font-family="system-ui,sans-serif" font-size="13" fill="#64748b">Book an appointment</text>
+    <rect x="88" y="350" width="120" height="36" rx="18" fill="#db2777"/>
+    <text x="148" y="373" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#fff">Book now</text>
+    <text x="60" y="400" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#831843">Available slots</text>
+    <g transform="translate(60 420)">
+      <rect width="96" height="44" rx="12" fill="#fff" stroke="#f9a8d4"/>
+      <text x="48" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#831843">10:00</text>
+    </g>
+    <g transform="translate(172 420)">
+      <rect width="96" height="44" rx="12" fill="#db2777"/>
+      <text x="48" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#fff">11:30</text>
+    </g>
+    <g transform="translate(284 420)">
+      <rect width="96" height="44" rx="12" fill="#fff" stroke="#f9a8d4"/>
+      <text x="48" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#831843">1:00</text>
+    </g>
+    <g transform="translate(396 420)">
+      <rect width="94" height="44" rx="12" fill="#fff" stroke="#f9a8d4"/>
+      <text x="47" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#831843">3:30</text>
+    </g>
+    <rect x="60" y="500" width="430" height="120" rx="20" fill="#fff"/>
+    <text x="88" y="535" font-family="system-ui,sans-serif" font-size="13" fill="#64748b">Shop · Best sellers</text>
+    <rect x="88" y="550" width="72" height="52" rx="10" fill="#fce7f3"/>
+    <rect x="172" y="550" width="72" height="52" rx="10" fill="#fce7f3"/>
+    <rect x="256" y="550" width="72" height="52" rx="10" fill="#fce7f3"/>
+    <rect x="340" y="550" width="72" height="52" rx="10" fill="#fce7f3"/>
+    <rect x="60" y="650" width="430" height="72" rx="18" fill="#fff"/>
+    <text x="88" y="682" font-family="system-ui,sans-serif" font-size="13" fill="#64748b">Branch map · OpenStreetMap</text>
+    <rect x="88" y="694" width="320" height="8" rx="4" fill="#fbcfe8"/>
+    <circle cx="430" cy="686" r="10" fill="#db2777"/>
+    <rect x="60" y="760" width="430" height="56" rx="28" fill="#be185d"/>
+    <text x="275" y="794" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="600" fill="#fff">Confirm booking</text>
+  </g>
+</svg>

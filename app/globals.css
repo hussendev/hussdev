@@ -1,0 +1,252 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #02233f;
+  --card: #ffffff;
+  --card-foreground: #02233f;
+  --primary: #02233f;
+  --primary-foreground: #fafafa;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #02233f;
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
+  --accent: #f5f5f5;
+  --accent-foreground: #02233f;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #a1a1a1;
+  --splash: oklch(97.943% 0.00592 42.542);
+  --radius: 0.625rem;
+
+  --font-site-sans: var(--font-manrope);
+  --font-emphasis: var(--font-readex-pro);
+}
+
+:root:lang(ar) {
+  --font-site-sans: var(--font-plex-arabic);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-splash: var(--splash);
+
+  --font-sans: var(--font-site-sans);
+  --font-readex: var(--font-emphasis);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.6);
+
+  --animate-pulse-soft: pulse-soft 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-scroll-hint: scroll-hint 1.8s ease-in-out infinite;
+
+  @keyframes pulse-soft {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+  }
+
+  @keyframes scroll-hint {
+    0% {
+      transform: translateY(0);
+      opacity: 0.9;
+    }
+    70% {
+      transform: translateY(10px);
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes showcase-enter {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-site-sans), ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1rem;
+
+  @media (min-width: 64rem) {
+    padding-inline: 2rem;
+  }
+}
+
+/* Glassmorphism surface copied from the reference site. */
+@utility glass {
+  border-radius: 8px;
+  background: rgba(218, 218, 218, 0.11);
+  box-shadow:
+    -2px -2px 8px 0 rgba(255, 255, 255, 0.04) inset,
+    2px 2px 8px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+}
+
+@utility glass-dark {
+  border-radius: 8px;
+  background: rgba(2, 35, 63, 0.06);
+  box-shadow:
+    -2px -2px 8px 0 rgba(2, 35, 63, 0.03) inset,
+    2px 2px 8px 0 rgba(2, 35, 63, 0.05);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+}
+
+/* iOS-style frosted navigation surfaces */
+@utility glass-nav {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.75),
+    0 4px 24px rgba(2, 35, 63, 0.08);
+}
+
+@utility glass-nav-hero {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+@utility font-readex {
+  font-family: var(--font-emphasis), ui-sans-serif, system-ui, sans-serif;
+}
+
+@utility font-heading {
+  font-family: var(--font-site-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Elements animated in by GSAP start hidden to avoid a flash. */
+.hero-item,
+.header-item,
+.reveal {
+  opacity: 0;
+}
+
+.no-js .hero-item,
+.no-js .header-item,
+.no-js .reveal,
+.motion-ready .hero-item,
+.motion-ready .header-item,
+.motion-ready .reveal {
+  opacity: 1;
+}
+
+.showcase-panel-enter {
+  animation: showcase-enter 0.45s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-item,
+  .header-item,
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .showcase-panel-enter {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Lenis smooth scroll recommended styles. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.lenis.lenis-autoToggle {
+  transition-property: overflow;
+  transition-duration: 1ms;
+  transition-behavior: allow-discrete;
+}
+
+/* Thin horizontal scrollbar hiding for card rails. */
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

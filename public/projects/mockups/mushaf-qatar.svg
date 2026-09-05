@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#134e4a"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ecfdf5"/>
+      <stop offset="1" stop-color="#d1fae5"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#02233f" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="900" height="1100" rx="48" fill="url(#bg)"/>
+  <g filter="url(#shadow)" transform="translate(175 80)">
+    <rect width="550" height="940" rx="56" fill="#111827"/>
+    <rect x="12" y="12" width="526" height="916" rx="48" fill="#000"/>
+    <rect x="24" y="24" width="502" height="892" rx="40" fill="url(#screen)"/>
+    <rect x="205" y="36" width="140" height="28" rx="14" fill="#111827"/>
+    <text x="275" y="130" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#065f46">E5-A B71</text>
+    <text x="275" y="162" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#047857">Al-Fatiha · 1:1</text>
+    <rect x="60" y="190" width="430" height="44" rx="22" fill="#fff" stroke="#a7f3d0"/>
+    <circle cx="88" cy="212" r="10" fill="#10b981"/>
+    <rect x="108" y="204" width="180" height="10" rx="5" fill="#d1fae5"/>
+    <text x="275" y="290" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#064e3b" direction="rtl">(P3REP 'DDNQGP 'D1NQ-RENpFP 'D1NQ-PJEP</text>
+    <text x="275" y="340" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#065f46" direction="rtl">'DR-NER/O DPDNQGP 1N(PQ 'DR9N'DNEPJFN</text>
+    <rect x="60" y="390" width="430" height="120" rx="20" fill="#fff" fill-opacity="0.85"/>
+    <text x="88" y="425" font-family="system-ui,sans-serif" font-size="14" fill="#047857">Prayer times · Doha</text>
+    <text x="88" y="465" font-family="system-ui,sans-serif" font-size="22" font-weight="600" fill="#064e3b">Maghrib  5:42 PM</text>
+    <rect x="88" y="482" width="120" height="8" rx="4" fill="#6ee7b7"/>
+    <g transform="translate(60 540)">
+      <rect width="130" height="90" rx="16" fill="#fff"/>
+      <text x="65" y="38" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#047857">Qibla</text>
+      <circle cx="65" cy="62" r="18" fill="none" stroke="#10b981" stroke-width="3"/>
+      <path d="M65 44 L65 58" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(210 540)">
+      <rect width="130" height="90" rx="16" fill="#fff"/>
+      <text x="65" y="38" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#047857">Tasbih</text>
+      <text x="65" y="68" text-anchor="middle" font-family="system-ui,sans-serif" font-size="24" font-weight="700" fill="#064e3b">33</text>
+    </g>
+    <g transform="translate(360 540)">
+      <rect width="130" height="90" rx="16" fill="#fff"/>
+      <text x="65" y="38" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#047857">Search</text>
+      <rect x="24" y="52" width="82" height="8" rx="4" fill="#a7f3d0"/>
+      <rect x="24" y="68" width="58" height="8" rx="4" fill="#d1fae5"/>
+    </g>
+    <rect x="60" y="760" width="430" height="56" rx="28" fill="#059669"/>
+    <text x="275" y="794" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="600" fill="#fff">Continue reading</text>
+  </g>
+</svg>

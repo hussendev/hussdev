@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" fill="none">
+  <rect x="2" y="4" width="40" height="40" rx="10" fill="currentColor"/>
+  <path d="M12 14v20M12 24h10M22 14v20" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M33 21.5a4.5 4.5 0 1 0-4.5 4.5H33v4.2a4.4 4.4 0 0 1-7.5 3.1" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="52" y="31" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="600" letter-spacing="0.5" fill="currentColor">hussen</text>
+  <text x="122" y="31" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="300" fill="currentColor">dev</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2e1065"/><stop offset="1" stop-color="#6d28d9"/></linearGradient>
+    <radialGradient id="g" cx="0.8" cy="0.2" r="0.7"><stop offset="0" stop-color="#f0abfc" stop-opacity="0.5"/><stop offset="1" stop-color="#f0abfc" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" fill="none" stroke="#fff" stroke-opacity="0.06"/></pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/><rect width="1200" height="800" fill="url(#grid)"/><rect width="1200" height="800" fill="url(#g)"/>
+  <g transform="translate(470 120)">
+    <rect width="260" height="560" rx="40" fill="#fff" fill-opacity="0.1" stroke="#fff" stroke-opacity="0.35" stroke-width="2"/>
+    <rect x="14" y="14" width="232" height="532" rx="30" fill="#fff" fill-opacity="0.07"/>
+    <g fill="#fff" fill-opacity="0.35">
+      <circle cx="70" cy="120" r="26"/><circle cx="130" cy="120" r="26"/><circle cx="190" cy="120" r="26"/>
+      <circle cx="70" cy="190" r="26"/><circle cx="130" cy="190" r="26"/><circle cx="190" cy="190" r="26"/>
+    </g>
+    <rect x="40" y="250" width="180" height="12" rx="6" fill="#fff" fill-opacity="0.4"/>
+    <rect x="40" y="272" width="120" height="10" rx="5" fill="#fff" fill-opacity="0.25"/>
+    <rect x="40" y="320" width="180" height="56" rx="14" fill="#fff" fill-opacity="0.14"/>
+    <rect x="40" y="390" width="180" height="56" rx="14" fill="#fff" fill-opacity="0.14"/>
+    <rect x="40" y="480" width="180" height="44" rx="14" fill="#fff" fill-opacity="0.45"/>
+  </g>
+  <g fill="none" stroke="#fff" stroke-opacity="0.15" stroke-width="1.5"><circle cx="600" cy="400" r="330"/><circle cx="600" cy="400" r="440"/></g>
+</svg>

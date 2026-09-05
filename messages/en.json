@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "title": "Hussen Ghabayen | Flutter Developer",
+    "description": "Flutter developer with 3+ years shipping production iOS and Android apps — eight live on App Store and Google Play across five markets. ~250,000 lines of Dart, Clean Architecture, real-time systems, and payments."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "openNavigation": "Open navigation",
+    "closeNavigation": "Close navigation",
+    "openQuickLinks": "Open contact links",
+    "switchToArabic": "Switch language to Arabic",
+    "switchToEnglish": "Switch language to English",
+    "quickLinks": {
+      "email": "Email me",
+      "whatsapp": "WhatsApp",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "cv": "Download CV"
+    }
+  },
+  "hero": {
+    "titleLight": "Building Mobile Experiences",
+    "titleBold": "I'm Hussen Ghabayen",
+    "subtitle": "Eight apps live on App Store and Google Play — from Qatar's official Qur'an app to AI platforms with WebRTC and SSE.",
+    "cta": "View My Work",
+    "scrollDown": "Scroll down"
+  },
+  "filter": {
+    "ariaLabel": "Project search",
+    "platform": "Platform",
+    "category": "Category",
+    "stack": "Stack",
+    "status": "Status",
+    "search": "Search",
+    "any": "Any",
+    "platforms": {
+      "android": "Android",
+      "ios": "iOS",
+      "both": "Android & iOS"
+    },
+    "categories": {
+      "social": "Social",
+      "transport": "Ride-hailing",
+      "commerce": "Commerce",
+      "healthcare": "Healthcare",
+      "education": "Education",
+      "services": "Services"
+    },
+    "statuses": {
+      "production": "Production",
+      "productionReady": "Production-ready"
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "titleLine1": "Hussen, apps",
+    "titleLine2": "designed around people",
+    "body": "Flutter developer with 3+ years shipping production iOS and Android applications, with eight apps live on the App Store and Google Play across five markets. Sole author of six codebases totaling roughly 250,000 lines of Dart. I work with feature-first Clean Architecture, BLoC/Cubit and Riverpod, offline-first data layers, and payment integrations across RevenueCat, Telr, and wallet gateways. I build real-time features including WebRTC voice, SSE streaming, and Firebase Cloud Functions — and deliver Arabic-first RTL products for Saudi, Iraqi, Egyptian, Palestinian, and Qatari markets.",
+    "cta": "Download CV",
+    "stats": {
+      "years": { "value": "3+", "label": "Years of experience" },
+      "apps": { "value": "8", "label": "Live on stores" },
+      "loc": { "value": "250K", "label": "Lines of Dart" },
+      "markets": { "value": "5", "label": "Markets served" }
+    }
+  },
+  "showcase": {
+    "eyebrow1": "SELECTED APPS",
+    "eyebrow2": "Featured Work",
+    "subtitle": "Three production Flutter apps on the App Store and Google Play.",
+    "scrollDown": "Scroll down",
+    "explore": "Case study",
+    "previous": "Previous project",
+    "next": "Next project",
+    "appStore": "Download on the App Store",
+    "playStore": "Get it on Google Play"
+  },
+  "projects": {
+    "titleLine1": "Discover The Work",
+    "titleLine2": "That Fits Your Product.",
+    "body": "Explore my projects and learn about the platforms, architectures and experiences behind each one.",
+    "all": "All projects",
+    "viewProject": "View project",
+    "pageTitle": "Projects",
+    "pageSubtitle": "Production apps, platforms and experiments built with Flutter.",
+    "results": "{count, plural, =0 {No projects match these filters} one {# project} other {# projects}}",
+    "clearFilters": "Clear filters",
+    "featured": "Featured"
+  },
+  "project": {
+    "back": "All projects",
+    "overview": "Overview",
+    "highlights": "Highlights",
+    "stack": "Tech stack",
+    "role": "Role",
+    "platform": "Platform",
+    "status": "Status",
+    "market": "Market",
+    "metrics": "Key numbers",
+    "nextProject": "Next project",
+    "discuss": "Discuss a similar project",
+    "download": "Download the app",
+    "appStore": "Download on the App Store",
+    "playStore": "Get it on Google Play"
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Professional Journey",
+    "body": "Roles, contributions and milestones that shaped how I build software.",
+    "skillsTitle": "Technical Skills",
+    "educationTitle": "Education & Certifications",
+    "present": "Present",
+    "viewAll": "Download full CV"
+  },
+  "contact": {
+    "titleLine1": "Let's build something",
+    "titleLine2": "or ask a question",
+    "body": "Share a few details and I will get back to you within one business day.",
+    "interestArea": "Interest area",
+    "fullName": "Full name",
+    "email": "Email address",
+    "phone": "Mobile number",
+    "country": "Palestine",
+    "inquiryType": "Inquiry type",
+    "preferredTime": "Preferred contact time",
+    "message": "Your message",
+    "consent": "By submitting this form, you agree to the processing of your personal data so I can respond to your inquiry.",
+    "submit": "Send request",
+    "sending": "Sending...",
+    "success": "Your request has been received successfully. Thank you for reaching out.",
+    "error": "Something went wrong. Please try again or email me directly.",
+    "interests": {
+      "mobileApp": "Mobile app development",
+      "realtime": "Real-time features",
+      "consulting": "Architecture consulting",
+      "other": "Other"
+    },
+    "inquiries": {
+      "freelance": "Freelance project",
+      "fulltime": "Full-time role",
+      "consulting": "Consulting",
+      "collaboration": "Collaboration"
+    },
+    "times": {
+      "morning": "Morning",
+      "afternoon": "Afternoon",
+      "evening": "Evening"
+    },
+    "quick": {
+      "call": "Call",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "location": "Location"
+    },
+    "validation": {
+      "name": "Please enter your full name.",
+      "email": "Please enter a valid email address.",
+      "message": "Please tell me a little about your project."
+    }
+  },
+  "footer": {
+    "newsletterTitle": "Get notified about new work",
+    "newsletterBody": "Occasional updates on new apps, open-source contributions and case studies.",
+    "emailPlaceholder": "Email address",
+    "subscribe": "Subscribe",
+    "sitemap": "Sitemap",
+    "work": "Work",
+    "connect": "Connect",
+    "taglineTitle": "Building apps people love to use",
+    "taglineBody": "Flutter developer shipping production apps across five markets — Clean Architecture, real-time systems, and payments at scale.",
+    "rights": "All rights reserved to Hussen Ghabayen",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "experience": "Experience",
+      "contact": "Contact",
+      "mushaf": "Mushaf Qatar",
+      "linkedwithin": "LinkedWithin",
+      "kayan": "Kayan Cafe",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "cv": "Download CV"
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you are looking for does not exist or has moved.",
+    "cta": "Back to home"
+  }
+}
