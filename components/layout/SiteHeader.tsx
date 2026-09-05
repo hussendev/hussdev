@@ -20,7 +20,9 @@ const navItems = [
 export function SiteHeader() {
   const t = useTranslations("nav");
   const pathname = usePathname();
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState({ path: pathname, open: false });
+  const mobileOpen = mobileMenu.path === pathname && mobileMenu.open;
+  const setMobileOpen = (open: boolean) => setMobileMenu({ path: pathname, open });
   const [scrolled, setScrolled] = useState(false);
   const isHome = pathname === "/";
   const heroGlass = isHome && !scrolled;
@@ -36,10 +38,6 @@ export function SiteHeader() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
 
   return (
     <div className="fixed inset-x-0 top-0 z-[100] px-3 pt-3 sm:px-4 md:pt-4">
@@ -88,7 +86,7 @@ export function SiteHeader() {
             aria-expanded={mobileOpen}
             aria-controls="mobile-navigation"
             className="header-item flex size-10 items-center justify-center rounded-xl transition-colors hover:bg-black/5 lg:hidden dark:hover:bg-white/10"
-            onClick={() => setMobileOpen((value) => !value)}
+            onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
