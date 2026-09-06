@@ -18,7 +18,7 @@ export default async function HomePage({
 
   return (
     <>
-      <section className="relative min-h-[100dvh] overflow-hidden">
+      <section className="relative flex min-h-[100dvh] flex-col overflow-hidden">
         <div className="pointer-events-none absolute inset-0 -z-10">
           <div className="absolute top-0 start-0 z-10 h-1/2 w-full bg-gradient-to-b from-black/90 to-transparent" />
           <div className="absolute bottom-0 start-0 z-10 h-1/2 w-full bg-gradient-to-t from-black/90 to-transparent" />

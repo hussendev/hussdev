@@ -11,7 +11,7 @@ export function Hero() {
   useHeroStagger();
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center px-4 text-center text-white translate-y-8 sm:translate-y-10 lg:translate-y-14">
+    <div className="flex flex-1 flex-col items-center justify-center px-4 pb-6 pt-24 text-center text-white sm:pb-8 sm:pt-28 lg:absolute lg:inset-0 lg:translate-y-8 lg:pb-0 lg:pt-0 xl:translate-y-14">
       <div className="mx-auto w-full max-w-3xl">
         <h1 className="hero-item mb-2 text-4xl font-light lg:text-6xl">
           {t("titleLight")}
@@ -37,7 +37,7 @@ export function HeroScrollHint() {
   const t = useTranslations("hero");
 
   return (
-    <div className="hero-item pointer-events-none absolute inset-x-0 bottom-4 z-10 flex flex-col items-center gap-2 px-2">
+    <div className="hero-item flex flex-col items-center gap-2 px-2 pb-4 lg:pointer-events-none lg:absolute lg:inset-x-0 lg:bottom-4 lg:z-10">
       <span className="text-sm font-light text-white/80">{t("scrollDown")}</span>
       <ChevronDown className="size-5 animate-scroll-hint text-white/80" />
     </div>

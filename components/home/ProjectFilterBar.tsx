@@ -28,7 +28,7 @@ export function ProjectFilterBar() {
   }
 
   return (
-    <div className="hero-item absolute inset-x-0 bottom-14 z-10 w-full px-2 sm:bottom-16">
+    <div className="hero-item w-full shrink-0 px-2 pb-2 lg:absolute lg:inset-x-0 lg:bottom-16 lg:z-10">
       <form
         aria-label={t("ariaLabel")}
         onSubmit={onSubmit}
