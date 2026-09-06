@@ -107,6 +107,7 @@
     "appStore": "حمّل من App Store",
     "playStore": "حمّل من Google Play",
     "desktopHint": "سطح المكتب — افتح تطبيقًا آخر",
+    "noProjects": "لا توجد مشاريع مطابقة لهذه الفلاتر.",
     "restoreApp": "استعادة {name}",
     "clickToRestore": "انقر للاستعادة",
     "clickToOpen": "انقر للفتح",

@@ -20,6 +20,8 @@ interface ProjectPreviewFrameProps {
   desktopHint: string;
   detailsOpen: boolean;
   onOpenProject: (slug: string) => void;
+  hubMode?: boolean;
+  desktopProjects?: Project[];
 }
 
 function TrafficButton({
@@ -269,6 +271,8 @@ export function ProjectPreviewFrame({
   desktopHint,
   detailsOpen,
   onOpenProject,
+  hubMode = false,
+  desktopProjects,
 }: ProjectPreviewFrameProps) {
   const t = useTranslations("project");
   const [minimized, setMinimized] = useState(!detailsOpen);
@@ -281,13 +285,16 @@ export function ProjectPreviewFrame({
   const appSlug = projectName.toLowerCase().replace(/\s+/g, "");
   const currentProject = projects.find((item) => item.slug === currentSlug);
   const currentLabel = pick(currentProject?.localizedName ?? { en: projectName, ar: projectName }, locale);
-  const otherProjects = projects.filter((item) => item.slug !== currentSlug);
+  const gridProjects = desktopProjects
+    ? desktopProjects.filter((item) => item.slug !== currentSlug)
+    : projects.filter((item) => item.slug !== currentSlug);
+  const closeHref = hubMode ? "/" : "/projects";
 
   useEffect(() => {
     setMaximized(false);
     setIsAnimating(false);
-    setMinimized(!detailsOpen);
-  }, [currentSlug, detailsOpen]);
+    setMinimized(hubMode ? true : !detailsOpen);
+  }, [currentSlug, detailsOpen, hubMode]);
 
   function prefersReducedMotion() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -355,6 +362,11 @@ export function ProjectPreviewFrame({
   }
 
   function handleWindowAction() {
+    if (hubMode) {
+      openProjectDetails(currentSlug);
+      return;
+    }
+
     if (detailsOpen) {
       restoreWindow();
     } else {
@@ -417,7 +429,7 @@ export function ProjectPreviewFrame({
         </button>
 
         <div className="grid w-full max-w-3xl grid-cols-4 gap-x-3 gap-y-7 sm:grid-cols-5 md:gap-x-5 md:gap-y-8">
-          {otherProjects.map((item) => (
+          {gridProjects.map((item) => (
             <DesktopAppIcon key={item.slug} project={item} locale={locale} onOpenProject={onOpenProject} />
           ))}
         </div>
@@ -445,7 +457,7 @@ export function ProjectPreviewFrame({
               label={t("closeWindow")}
               icon="×"
               className="bg-[#ff5f57]"
-              href="/projects"
+              href={closeHref}
             />
             <TrafficButton
               label={t("minimizeToDesktop")}
@@ -505,7 +517,7 @@ export function ProjectPreviewFrame({
           maximized ? "max-w-[min(96vw,1400px)]" : "max-w-5xl",
         )}
       >
-        {minimized ? desktopView : windowView}
+        {hubMode || minimized ? desktopView : windowView}
       </div>
     </section>
   );

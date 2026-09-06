@@ -107,6 +107,7 @@
     "appStore": "Download on the App Store",
     "playStore": "Get it on Google Play",
     "desktopHint": "Portfolio desktop — open another app",
+    "noProjects": "No projects match these filters.",
     "restoreApp": "Restore {name}",
     "clickToRestore": "Click to restore",
     "clickToOpen": "Click to open",

@@ -26,7 +26,7 @@ export function SiteHeader() {
   const setMobileOpen = (open: boolean) => setMobileMenu({ path: pathname, open });
   const [scrolled, setScrolled] = useState(false);
   const isHome = pathname === "/";
-  const heroGlass = isHome && !scrolled;
+  const heroLightText = isHome && !scrolled && !mobileOpen;
 
   useHeaderStagger();
 
@@ -41,11 +41,20 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <div className="fixed inset-x-0 top-0 z-[100] px-3 pt-3 sm:px-4 md:pt-4">
+    <>
+      {mobileOpen ? (
+        <button
+          type="button"
+          aria-label={t("closeNavigation")}
+          className="fixed inset-0 z-[90] bg-[#020817]/55 backdrop-blur-sm lg:hidden"
+          onClick={() => setMobileOpen(false)}
+        />
+      ) : null}
+      <div className="fixed inset-x-0 top-0 z-[100] px-3 pt-3 sm:px-4 md:pt-4">
       <div
         className={cn(
           "container mx-auto rounded-2xl transition-[background,box-shadow,color,border-color] duration-500 ease-out",
-          heroGlass
+          heroLightText
             ? "border border-transparent bg-transparent text-white shadow-none"
             : "glass-nav text-primary",
         )}
@@ -108,7 +117,7 @@ export function SiteHeader() {
 
           <div className="header-item hidden items-center gap-6 lg:flex xl:gap-8">
             <LanguageSwitcher />
-            <QuickLinksMenu tone={heroGlass ? "light" : "dark"} />
+            <QuickLinksMenu tone={heroLightText ? "light" : "dark"} />
           </div>
         </header>
 
@@ -117,7 +126,7 @@ export function SiteHeader() {
           aria-label="Mobile navigation"
           className={cn(
             "overflow-hidden border-t transition-[max-height,opacity] duration-300 lg:hidden",
-            heroGlass ? "border-white/10" : "border-primary/8",
+            heroLightText ? "border-white/10" : "border-primary/8",
             mobileOpen
               ? "pointer-events-auto max-h-[28rem] opacity-100"
               : "pointer-events-none max-h-0 opacity-0",
@@ -131,7 +140,7 @@ export function SiteHeader() {
                     href={href}
                     className={cn(
                       "block rounded-xl px-3 py-3 text-sm font-medium transition-colors",
-                      heroGlass ? "hover:bg-white/10" : "hover:bg-primary/5",
+                      heroLightText ? "hover:bg-white/10" : "hover:bg-primary/5",
                     )}
                     onClick={() => setMobileOpen(false)}
                   >
@@ -142,7 +151,7 @@ export function SiteHeader() {
                     href={href}
                     className={cn(
                       "block rounded-xl px-3 py-3 text-sm font-medium transition-colors",
-                      heroGlass ? "hover:bg-white/10" : "hover:bg-primary/5",
+                      heroLightText ? "hover:bg-white/10" : "hover:bg-primary/5",
                     )}
                     onClick={() => setMobileOpen(false)}
                   >
@@ -154,19 +163,19 @@ export function SiteHeader() {
             <li
               className={cn(
                 "border-t pt-3",
-                heroGlass ? "border-white/10" : "border-primary/8",
+                heroLightText ? "border-white/10" : "border-primary/8",
               )}
             >
               <LanguageSwitcher
-                className={cn("justify-center text-base", !heroGlass && "text-primary")}
+                className={cn("justify-center text-base", !heroLightText && "text-primary")}
               />
             </li>
             <li className="px-1 pb-1 pt-2">
               <QuickLinksMenu
-                tone={heroGlass ? "light" : "dark"}
+                tone={heroLightText ? "light" : "dark"}
                 className={cn(
                   "w-full [&>button]:w-full [&>button]:justify-center",
-                  !heroGlass && "[&>button]:text-primary",
+                  !heroLightText && "[&>button]:text-primary",
                 )}
               />
             </li>
@@ -174,5 +183,6 @@ export function SiteHeader() {
         </nav>
       </div>
     </div>
+    </>
   );
 }

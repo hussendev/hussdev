@@ -42,12 +42,12 @@ export function ProjectDetailExperience({
   const router = useRouter();
   const searchParams = useSearchParams();
   const detailsRef = useRef<HTMLDivElement>(null);
-  const detailsOpen = searchParams.get("open") === "1";
+  const detailsOpen = searchParams.get("open") !== "0";
 
   const openProject = useCallback(
     (slug: string) => {
       resetScrollPosition();
-      router.push(`/projects/${slug}?open=1`);
+      router.push(`/projects/${slug}`);
     },
     [router],
   );
