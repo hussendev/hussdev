@@ -386,7 +386,8 @@ export const projects: Project[] = [
     featured: false,
     accent: "#4c1d95",
     accentSoft: "#fbbf24",
-    image: "/projects/hunter-rank.svg",
+    image: "/projects/mockups/hunter-rank.png",
+    mockup: "/projects/mockups/hunter-rank.png",
     year: "2026",
     storeLinks: {
       appStore: "https://apps.apple.com/us/app/hunter-rank/id6786148849",
