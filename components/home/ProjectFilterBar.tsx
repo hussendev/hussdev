@@ -2,9 +2,9 @@
 
 import { allStackTags, type Category, type Platform, type Status } from "@/content/projects";
 import { useRouter } from "@/i18n/navigation";
-import { GlassPanelDark } from "@/components/ui/glass-panel";
 import { Button } from "@/components/ui/button";
 import { Select } from "@/components/ui/select";
+import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { FormEvent, useState } from "react";
 
@@ -28,19 +28,19 @@ export function ProjectFilterBar() {
   }
 
   return (
-    <div className="hero-item mb-8 mt-2 w-full px-2 lg:absolute lg:bottom-24">
+    <div className="hero-item absolute inset-x-0 bottom-14 z-10 w-full px-2 sm:bottom-16">
       <form
         aria-label={t("ariaLabel")}
         onSubmit={onSubmit}
-        className="mx-auto w-full max-w-3xl"
+        className="container mx-auto w-full"
       >
-        <GlassPanelDark className="border border-white/10 p-2">
-          <div className="grid grid-cols-2 items-center gap-3 lg:grid-cols-5">
+        <div className={cn("glass-filter-bar rounded-2xl p-3 lg:p-4")}>
+          <div className="grid grid-cols-2 items-center gap-3 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
             <Select
               tone="onDark"
               value={platform}
               onChange={(event) => setPlatform(event.target.value)}
-              placeholder={t("platform")}
+              placeholder={t("any")}
             >
               <option value="">{t("any")}</option>
               {(["android", "ios", "both"] as Platform[]).map((value) => (
@@ -54,7 +54,7 @@ export function ProjectFilterBar() {
               tone="onDark"
               value={category}
               onChange={(event) => setCategory(event.target.value)}
-              placeholder={t("category")}
+              placeholder={t("any")}
             >
               <option value="">{t("any")}</option>
               {(
@@ -77,7 +77,7 @@ export function ProjectFilterBar() {
               tone="onDark"
               value={stack}
               onChange={(event) => setStack(event.target.value)}
-              placeholder={t("stack")}
+              placeholder={t("any")}
             >
               <option value="">{t("any")}</option>
               {allStackTags.map((value) => (
@@ -91,7 +91,7 @@ export function ProjectFilterBar() {
               tone="onDark"
               value={status}
               onChange={(event) => setStatus(event.target.value)}
-              placeholder={t("status")}
+              placeholder={t("any")}
             >
               <option value="">{t("any")}</option>
               {(["production", "productionReady"] as Status[]).map((value) => (
@@ -101,11 +101,15 @@ export function ProjectFilterBar() {
               ))}
             </Select>
 
-            <Button type="submit" variant="default" className="col-span-2 h-12 lg:col-span-1">
+            <Button
+              type="submit"
+              variant="default"
+              className="col-span-2 h-12 min-w-[7.5rem] px-8 lg:col-span-1"
+            >
               {t("search")}
             </Button>
           </div>
-        </GlassPanelDark>
+        </div>
       </form>
     </div>
   );

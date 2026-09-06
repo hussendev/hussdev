@@ -48,7 +48,7 @@ export function QuickLinksMenu({
         className={cn(
           "flex cursor-pointer items-center gap-2 rounded-xl px-5 py-2 text-sm font-medium transition-all duration-300",
           tone === "light"
-            ? "glass border border-white/20 text-white hover:bg-white/10"
+            ? "border border-white/20 bg-black/25 text-white backdrop-blur-sm hover:bg-black/35"
             : "border border-primary/10 bg-white/50 text-primary backdrop-blur-md hover:bg-white/70",
         )}
       >

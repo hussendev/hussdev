@@ -45,7 +45,9 @@ export function SiteHeader() {
       <div
         className={cn(
           "container mx-auto rounded-2xl transition-[background,box-shadow,color,border-color] duration-500 ease-out",
-          heroGlass ? "glass-nav-hero text-white" : "glass-nav text-primary",
+          heroGlass
+            ? "border border-transparent bg-transparent text-white shadow-none"
+            : "glass-nav text-primary",
         )}
       >
         <header className="relative flex items-center justify-between px-4 py-2.5 lg:px-5 lg:py-3">

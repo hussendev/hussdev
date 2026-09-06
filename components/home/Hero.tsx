@@ -4,7 +4,6 @@ import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { useHeroStagger } from "@/components/motion/useReveal";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 export function Hero() {
@@ -12,21 +11,8 @@ export function Hero() {
   useHeroStagger();
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden pt-10">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 start-0 z-10 h-1/2 w-full bg-gradient-to-b from-black/90 to-transparent" />
-        <div className="absolute bottom-0 start-0 z-10 h-1/2 w-full bg-gradient-to-t from-black/90 to-transparent" />
-        <Image
-          src="/hero.svg"
-          alt=""
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-      </div>
-
-      <div className="relative mt-[10vh] text-center text-white">
+    <div className="absolute inset-0 flex items-center justify-center px-4 text-center text-white translate-y-8 sm:translate-y-10 lg:translate-y-14">
+      <div className="mx-auto w-full max-w-3xl">
         <h1 className="hero-item mb-2 text-4xl font-light lg:text-6xl">
           {t("titleLight")}
         </h1>
@@ -43,11 +29,17 @@ export function Hero() {
           </Button>
         </Link>
       </div>
+    </div>
+  );
+}
 
-      <div className="hero-item mb-8 mt-8 flex flex-col items-center gap-2 px-2 lg:absolute lg:bottom-8 lg:start-0 lg:end-0">
-        <span className="text-sm font-light text-white/80">{t("scrollDown")}</span>
-        <ChevronDown className="size-5 animate-scroll-hint text-white/80" />
-      </div>
-    </section>
+export function HeroScrollHint() {
+  const t = useTranslations("hero");
+
+  return (
+    <div className="hero-item pointer-events-none absolute inset-x-0 bottom-4 z-10 flex flex-col items-center gap-2 px-2">
+      <span className="text-sm font-light text-white/80">{t("scrollDown")}</span>
+      <ChevronDown className="size-5 animate-scroll-hint text-white/80" />
+    </div>
   );
 }

@@ -13,9 +13,9 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
       <select
         ref={ref}
         className={cn(
-          "flex h-12 w-full appearance-none rounded-md border px-3 pe-10 text-sm shadow-none outline-none transition-colors focus-visible:ring-3 disabled:cursor-not-allowed disabled:opacity-50",
+          "flex h-12 w-full appearance-none rounded-lg border px-3 pe-10 text-sm shadow-none outline-none transition-colors focus-visible:ring-3 disabled:cursor-not-allowed disabled:opacity-50",
           tone === "onDark"
-            ? "border-white/25 bg-black/35 text-white backdrop-blur-md scheme-dark focus-visible:border-white/45 focus-visible:ring-white/20 [&>option]:bg-primary [&>option]:text-white"
+            ? "border-transparent bg-black/40 text-white backdrop-blur-md scheme-dark focus-visible:border-transparent focus-visible:ring-white/15 [&>option]:bg-primary [&>option]:text-white"
             : "border-input bg-white/90 text-foreground focus-visible:border-primary focus-visible:ring-ring/30",
           className,
         )}
