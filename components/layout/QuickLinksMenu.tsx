@@ -61,7 +61,7 @@ export function QuickLinksMenu({
       <div
         id="header-quick-links"
         className={cn(
-          "absolute end-0 top-[calc(100%+0.5rem)] min-w-52 overflow-hidden rounded-md border border-white/10 bg-primary/95 p-2 text-white shadow-xl backdrop-blur-md transition-all duration-200",
+          "absolute end-0 top-[calc(100%+0.5rem)] z-[110] min-w-52 overflow-hidden rounded-xl border border-white/10 bg-primary/95 p-2 text-white shadow-xl backdrop-blur-md transition-all duration-200",
           open
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-2 opacity-0",

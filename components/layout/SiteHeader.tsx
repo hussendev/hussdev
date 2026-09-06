@@ -3,6 +3,7 @@
 import { Link, usePathname } from "@/i18n/navigation";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { QuickLinksMenu } from "@/components/layout/QuickLinksMenu";
+import { NavHashLink } from "@/components/navigation/NavHashLink";
 import { useHeaderStagger } from "@/components/motion/useReveal";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
@@ -43,7 +44,7 @@ export function SiteHeader() {
     <div className="fixed inset-x-0 top-0 z-[100] px-3 pt-3 sm:px-4 md:pt-4">
       <div
         className={cn(
-          "container mx-auto overflow-hidden rounded-2xl transition-[background,box-shadow,color,border-color] duration-500 ease-out",
+          "container mx-auto rounded-2xl transition-[background,box-shadow,color,border-color] duration-500 ease-out",
           heroGlass ? "glass-nav-hero text-white" : "glass-nav text-primary",
         )}
       >
@@ -66,15 +67,27 @@ export function SiteHeader() {
 
               return (
                 <li key={key} className="header-item">
-                  <Link
-                    href={href}
-                    className={cn(
-                      "text-sm font-medium transition-opacity duration-300 hover:opacity-100",
-                      active ? "opacity-100" : "opacity-65",
-                    )}
-                  >
-                    {t(key)}
-                  </Link>
+                  {href.startsWith("/#") ? (
+                    <NavHashLink
+                      href={href}
+                      className={cn(
+                        "text-sm font-medium transition-opacity duration-300 hover:opacity-100",
+                        active ? "opacity-100" : "opacity-65",
+                      )}
+                    >
+                      {t(key)}
+                    </NavHashLink>
+                  ) : (
+                    <Link
+                      href={href}
+                      className={cn(
+                        "text-sm font-medium transition-opacity duration-300 hover:opacity-100",
+                        active ? "opacity-100" : "opacity-65",
+                      )}
+                    >
+                      {t(key)}
+                    </Link>
+                  )}
                 </li>
               );
             })}
@@ -111,16 +124,29 @@ export function SiteHeader() {
           <ul className="flex flex-col gap-1 p-3">
             {navItems.map(({ href, key }) => (
               <li key={key}>
-                <Link
-                  href={href}
-                  className={cn(
-                    "block rounded-xl px-3 py-3 text-sm font-medium transition-colors",
-                    heroGlass ? "hover:bg-white/10" : "hover:bg-primary/5",
-                  )}
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {t(key)}
-                </Link>
+                {href.startsWith("/#") ? (
+                  <NavHashLink
+                    href={href}
+                    className={cn(
+                      "block rounded-xl px-3 py-3 text-sm font-medium transition-colors",
+                      heroGlass ? "hover:bg-white/10" : "hover:bg-primary/5",
+                    )}
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {t(key)}
+                  </NavHashLink>
+                ) : (
+                  <Link
+                    href={href}
+                    className={cn(
+                      "block rounded-xl px-3 py-3 text-sm font-medium transition-colors",
+                      heroGlass ? "hover:bg-white/10" : "hover:bg-primary/5",
+                    )}
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {t(key)}
+                  </Link>
+                )}
               </li>
             ))}
             <li

@@ -66,6 +66,7 @@ export interface Project {
   accentSoft: string;
   image: string;
   mockup?: string;
+  icon?: string;
   year: string;
   storeLinks?: {
     appStore?: string;
@@ -127,6 +128,7 @@ export const projects: Project[] = [
     accentSoft: "#4ade80",
     image: "/projects/mockups/mushaf-qatar.jpg",
     mockup: "/projects/mockups/mushaf-qatar.jpg",
+    icon: "/projects/icons/mushaf-qatar.webp",
     year: "2025",
     storeLinks: {
       appStore: "https://apps.apple.com/app/id500544210",
@@ -181,6 +183,7 @@ export const projects: Project[] = [
     accentSoft: "#818cf8",
     image: "/projects/mockups/linkedwithin.png",
     mockup: "/projects/mockups/linkedwithin.png",
+    icon: "/projects/icons/linkedwithin.jpg",
     year: "2025",
   },
   {
@@ -231,6 +234,7 @@ export const projects: Project[] = [
     accentSoft: "#a78bfa",
     image: "/projects/mockups/balonia.jpg",
     mockup: "/projects/mockups/balonia.jpg",
+    icon: "/projects/icons/balonia.png",
     year: "2025",
   },
   {
@@ -281,6 +285,7 @@ export const projects: Project[] = [
     accentSoft: "#fcd34d",
     image: "/projects/mockups/kayan-cafe.jpg",
     mockup: "/projects/mockups/kayan-cafe.jpg",
+    icon: "/projects/icons/kayan-cafe-icon.png",
     year: "2025",
     storeLinks: {
       playStore: "https://play.google.com/store/apps/details?id=com.kayan.app",
@@ -334,6 +339,7 @@ export const projects: Project[] = [
     accentSoft: "#93c5fd",
     image: "/projects/mockups/eduba.png",
     mockup: "/projects/mockups/eduba.png",
+    icon: "/projects/icons/eduba.webp",
     year: "2025",
     storeLinks: {
       appStore: "https://apps.apple.com/app/eduba/id6762039465",
@@ -388,6 +394,7 @@ export const projects: Project[] = [
     accentSoft: "#fbbf24",
     image: "/projects/mockups/hunter-rank.png",
     mockup: "/projects/mockups/hunter-rank.png",
+    icon: "/projects/icons/hunter-rank.png",
     year: "2026",
     storeLinks: {
       appStore: "https://apps.apple.com/us/app/hunter-rank/id6786148849",
@@ -442,6 +449,7 @@ export const projects: Project[] = [
     accentSoft: "#f9a8d4",
     image: "/projects/mockups/mmb.jpg",
     mockup: "/projects/mockups/mmb.jpg",
+    icon: "/projects/icons/mmb.png",
     year: "2025",
     storeLinks: {
       appStore: "https://apps.apple.com/app/mmb/id6462795471",
@@ -496,6 +504,7 @@ export const projects: Project[] = [
     accentSoft: "#fb923c",
     image: "/projects/mockups/mistercar.png",
     mockup: "/projects/mockups/mistercar.png",
+    icon: "/projects/icons/mistercar.webp",
     year: "2025",
     storeLinks: {
       appStore: "https://apps.apple.com/app/id6758611421",
@@ -550,6 +559,7 @@ export const projects: Project[] = [
     accentSoft: "#fde047",
     image: "/projects/mockups/dar-al-asas.png",
     mockup: "/projects/mockups/dar-al-asas.png",
+    icon: "/projects/icons/dar-al-asas-icon.png",
     year: "2025",
     storeLinks: {
       appStore: "https://apps.apple.com/app/id6789016723",
@@ -604,6 +614,7 @@ export const projects: Project[] = [
     accentSoft: "#34d399",
     image: "/projects/mockups/e-shabni.jpg",
     mockup: "/projects/mockups/e-shabni.jpg",
+    icon: "/projects/icons/e-shabni.png",
     year: "2025",
     storeLinks: {
       apps: [
@@ -660,6 +671,7 @@ export const projects: Project[] = [
     accentSoft: "#60a5fa",
     image: "/projects/mockups/academex.jpg",
     mockup: "/projects/mockups/academex.jpg",
+    icon: "/projects/icons/academex.png",
     year: "2023",
   },
 ];
@@ -669,6 +681,10 @@ export const secondaryProjects = projects.filter((p) => !p.featured);
 
 export function getProject(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);
+}
+
+export function getProjectIcon(project: Project): string {
+  return project.icon ?? project.mockup ?? project.image;
 }
 
 export const allStackTags: StackTag[] = Array.from(

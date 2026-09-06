@@ -1,30 +1,14 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef } from "react";
-import Lenis from "lenis";
+import { HashScrollSync } from "@/components/motion/HashScrollSync";
+import { setLenisInstance } from "@/lib/scroll";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { usePathname } from "@/i18n/navigation";
+import Lenis from "lenis";
+import { usePathname } from "next/navigation";
+import { useEffect, useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const HEADER_OFFSET = 96;
-
-function scrollToHash(lenis: Lenis | null, hash: string, immediate = false) {
-  const id = hash.replace(/^#/, "");
-  if (!id) return;
-
-  const target = document.getElementById(id);
-  if (!target) return;
-
-  if (lenis) {
-    lenis.scrollTo(target, { offset: -HEADER_OFFSET, immediate });
-  } else {
-    const top =
-      target.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET;
-    window.scrollTo({ top, behavior: immediate ? "auto" : "smooth" });
-  }
-}
 
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
   const lenisRef = useRef<Lenis | null>(null);
@@ -56,7 +40,12 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     });
 
     lenisRef.current = lenis;
+    setLenisInstance(lenis);
     document.documentElement.classList.add("lenis");
+
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
 
     lenis.on("scroll", ScrollTrigger.update);
 
@@ -67,43 +56,19 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     gsap.ticker.add(ticker);
     gsap.ticker.lagSmoothing(0);
 
-    const onHashChange = () => {
-      scrollToHash(lenis, window.location.hash);
-      requestAnimationFrame(() => ScrollTrigger.refresh());
-    };
-
-    window.addEventListener("hashchange", onHashChange);
-
-    if (window.location.hash) {
-      requestAnimationFrame(() => {
-        scrollToHash(lenis, window.location.hash, true);
-        ScrollTrigger.refresh();
-      });
-    }
-
     return () => {
-      window.removeEventListener("hashchange", onHashChange);
       gsap.ticker.remove(ticker);
       lenis.destroy();
       lenisRef.current = null;
+      setLenisInstance(null);
       document.documentElement.classList.remove("lenis");
     };
   }, []);
 
-  useEffect(() => {
-    const hash = window.location.hash;
-
-    if (hash) {
-      requestAnimationFrame(() => {
-        scrollToHash(lenisRef.current, hash, true);
-        ScrollTrigger.refresh();
-      });
-      return;
-    }
-
-    lenisRef.current?.scrollTo(0, { immediate: true });
-    ScrollTrigger.refresh();
-  }, [pathname]);
-
-  return <>{children}</>;
+  return (
+    <>
+      <HashScrollSync onScroll={() => ScrollTrigger.refresh()} />
+      {children}
+    </>
+  );
 }

@@ -105,7 +105,14 @@
     "discuss": "ناقش مشروعًا مشابهًا",
     "download": "حمّل التطبيق",
     "appStore": "حمّل من App Store",
-    "playStore": "حمّل من Google Play"
+    "playStore": "حمّل من Google Play",
+    "desktopHint": "سطح المكتب — افتح تطبيقًا آخر",
+    "restoreApp": "استعادة {name}",
+    "clickToRestore": "انقر للاستعادة",
+    "clickToOpen": "انقر للفتح",
+    "openApp": "فتح {name}",
+    "closeWindow": "العودة إلى كل المشاريع",
+    "minimizeToDesktop": "تصغير إلى سطح المكتب"
   },
   "experience": {
     "eyebrow": "الخبرات",

@@ -1,6 +1,7 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
+import { NavHashLink } from "@/components/navigation/NavHashLink";
 import { site } from "@/content/site";
 import { pick } from "@/content/types";
 import { Input } from "@/components/ui/input";
@@ -44,22 +45,28 @@ export function SiteFooter() {
             </h4>
             <ul className="mt-4 space-y-2 text-sm">
               {(["home", "about", "projects", "experience", "contact"] as const).map(
-                (key) => (
-                  <li key={key}>
-                    <Link
-                      href={
-                        key === "home"
-                          ? "/"
-                          : key === "projects"
-                            ? "/projects"
-                            : `/#${key}`
-                      }
-                      className="hover:underline"
-                    >
-                      {t(`links.${key}`)}
-                    </Link>
-                  </li>
-                ),
+                (key) => {
+                  const href =
+                    key === "home"
+                      ? "/"
+                      : key === "projects"
+                        ? "/projects"
+                        : `/#${key}`;
+
+                  return (
+                    <li key={key}>
+                      {href.startsWith("/#") ? (
+                        <NavHashLink href={href} className="hover:underline">
+                          {t(`links.${key}`)}
+                        </NavHashLink>
+                      ) : (
+                        <Link href={href} className="hover:underline">
+                          {t(`links.${key}`)}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                },
               )}
             </ul>
           </div>

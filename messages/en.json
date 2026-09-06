@@ -105,7 +105,14 @@
     "discuss": "Discuss a similar project",
     "download": "Download the app",
     "appStore": "Download on the App Store",
-    "playStore": "Get it on Google Play"
+    "playStore": "Get it on Google Play",
+    "desktopHint": "Portfolio desktop — open another app",
+    "restoreApp": "Restore {name}",
+    "clickToRestore": "Click to restore",
+    "clickToOpen": "Click to open",
+    "openApp": "Open {name}",
+    "closeWindow": "Back to all projects",
+    "minimizeToDesktop": "Minimize to desktop"
   },
   "experience": {
     "eyebrow": "Experience",
